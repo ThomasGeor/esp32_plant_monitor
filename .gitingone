@@ -1,5 +1,5 @@
 # Ignore these directories and files 
-/build
+build/
 *.json
 *.out
 *.cmake
