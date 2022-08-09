@@ -8,19 +8,14 @@
    CONDITIONS OF ANY KIND, either express or implied.
 */
 
-#include "freertos/FreeRTOS.h"
-#include "freertos/queue.h"
-#include "tc74.h"
-#include "esp_sleep.h"
 #include "http_server.h"
 
-static const char *_tag = "BURGLAR_ALARM";
+static const char *_tag = "Plant_Server";
 
 void tc74_init(void)
 {
   // setup the sensor
   ESP_ERROR_CHECK(i2c_master_init());
-  i2c_master_set_tc74_mode(I2C_MASTER_NUM, SET_NORM_OP_VALUE);
 }
 
 void app_main(void)

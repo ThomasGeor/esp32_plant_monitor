@@ -10,6 +10,8 @@
 
 #include "tc74.h"
 
+static const char *TEMP_TAG = "Temperature";
+
 /**
  * @brief i2c master initialization (esp32 as master)
  */
@@ -108,4 +110,17 @@ esp_err_t i2c_master_set_tc74_mode(i2c_port_t i2c_num, uint8_t mode)
     ret = i2c_master_cmd_begin(i2c_num, cmd, 300 / portTICK_RATE_MS);
     i2c_cmd_link_delete(cmd);
     return ret;
+}
+
+/* Custom functions */
+uint8_t temperature_reading(void)
+{
+    uint8_t temperature_value;
+    i2c_master_set_tc74_mode(I2C_MASTER_NUM, SET_NORM_OP_VALUE);
+    vTaskDelay(250 / portTICK_RATE_MS);
+    i2c_master_read_temp(I2C_MASTER_NUM, &temperature_value);
+    ESP_LOGI(TEMP_TAG, "Temperature is : %d", temperature_value);
+    // set standby mode for low consuption (5uA)
+    i2c_master_set_tc74_mode(I2C_MASTER_NUM, SET_STANBY_VALUE);
+    return temperature_value;
 }

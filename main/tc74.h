@@ -51,3 +51,4 @@ esp_err_t i2c_master_init(void);
 esp_err_t i2c_master_read_temp(i2c_port_t i2c_num, uint8_t *tmprt);
 esp_err_t i2c_master_set_tc74_mode(i2c_port_t i2c_num, uint8_t mode);
 esp_err_t i2c_master_read_tc74_config(i2c_port_t i2c_num, uint8_t *mode);
+uint8_t temperature_reading(void);

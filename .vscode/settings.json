@@ -6,6 +6,10 @@
   "idf.flashType": "UART",
   "idf.portWin": "COM4",
   "files.associations": {
-    "tc74.h": "c"
+    "tc74.h": "c",
+    "http_server.h": "c",
+    "stdio.h": "c",
+    "wifi_handler.h": "c",
+    "html_creator.h": "c"
   }
 }
