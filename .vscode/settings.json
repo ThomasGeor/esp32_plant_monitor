@@ -10,6 +10,12 @@
     "http_server.h": "c",
     "stdio.h": "c",
     "wifi_handler.h": "c",
-    "html_creator.h": "c"
+    "html_creator.h": "c",
+    "gpio_driver.h": "c",
+    "string.h": "c",
+    "lux_driver.h": "c",
+    "timer_driver.h": "c",
+    "mq135.h": "c",
+    "adc_driver.h": "c"
   }
 }

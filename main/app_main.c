@@ -24,5 +24,7 @@ void app_main(void)
   esp_log_level_set(_tag, ESP_LOG_ERROR);
 
   tc74_init();
+  ldr_init();
+  mq135_init();
   http_server_config();
 }

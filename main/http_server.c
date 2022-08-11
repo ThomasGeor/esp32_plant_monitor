@@ -55,6 +55,7 @@ static esp_err_t temperature_get_handler(httpd_req_t *req)
 {
   char resp[HTTP_STACK_SIZE / 2];
   create_webpage(resp);
+  sntp();
   httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
   return ESP_OK;
 }
@@ -117,4 +118,6 @@ void http_server_config(void)
 
   /* Start the server for the first time */
   server = start_webserver();
+
+  sntp();
 }

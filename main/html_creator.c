@@ -28,7 +28,7 @@ void create_webpage(char *html_code)
                      "      }\n"
                      "\n"
                      "      table {\n"
-                     "        width: 500px;\n"
+                     "        width: 650px;\n"
                      "        margin-top: 100px;\n"
                      "        font-size: 18px;\n"
                      "        border-collapse: collapse;\n"
@@ -63,17 +63,24 @@ void create_webpage(char *html_code)
                      "      </thead>\n"
                      "      <tbody>\n"
                      "        <tr>\n"
+                     "          <th>Τimestamp</th>\n"
+                     "          <td>%s</td>\n"
+                     "        </tr>\n"
+                     "        <tr>\n"
                      "          <th>TC74 Temperature</th>\n"
                      "          <td>%d C°</td>\n"
                      "        </tr>\n"
                      "        <tr>\n"
                      "          <th>MQ135 CO2 Level</th>\n"
-                     "          <td>%d PPM</td>\n"
+                     "          <td>%f PPM</td>\n"
                      "        </tr>\n"
-
+                     "        <tr>\n"
+                     "          <th>LDR Light intensity</th>\n"
+                     "          <td>%d%%</td>\n"
+                     "        </tr>\n"
                      "      </tbody>\n"
                      "    </table>\n"
                      "  </body>\n"
                      "</html>",
-          temperature_reading(), 0);
+          get_timestamp(), temperature_reading(), get_co2_ppm_value(), get_light_intensity());
 }

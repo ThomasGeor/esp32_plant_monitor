@@ -119,7 +119,7 @@ uint8_t temperature_reading(void)
     i2c_master_set_tc74_mode(I2C_MASTER_NUM, SET_NORM_OP_VALUE);
     vTaskDelay(250 / portTICK_RATE_MS);
     i2c_master_read_temp(I2C_MASTER_NUM, &temperature_value);
-    ESP_LOGI(TEMP_TAG, "Temperature is : %d", temperature_value);
+    // ESP_LOGI(TEMP_TAG, "%d", temperature_value);
     // set standby mode for low consuption (5uA)
     i2c_master_set_tc74_mode(I2C_MASTER_NUM, SET_STANBY_VALUE);
     return temperature_value;
