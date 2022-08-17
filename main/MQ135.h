@@ -1,12 +1,11 @@
 #include <adc_driver.h>
 #include <timer_driver.h>
 #include <math.h>
-#include <tc74.h>
-
-#define CALIBRATION_MODE
 
 // Calibration resistance at atmospheric CO2 level
-#define RZERO 76.63
+// #define CALIBRATION_MODE
+#define RZERO 81.9
+
 // The load resistance on the board
 #define RLOAD 20.0
 // Parameters to model temperature and humidity dependence
@@ -23,6 +22,8 @@
 #define PARB 2.769034857
 // Atmospheric CO2 level for calibration purposes
 #define ATMOCO2 414.72
+
+static const char *MQ135_TAG = "MQ135";
 
 void mq135_init(void);
 void set_mq135_ready(void);

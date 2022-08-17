@@ -10,7 +10,7 @@
 
 static const char *DHT_TAG = "DHT";
 
-int dhtPin = GPIO_NUM_35; // my default DHT pin = 4
+int dhtPin = GPIO_NUM_27; // my default DHT pin = 4
 
 void setDhtPin(int gpio)
 {

@@ -78,9 +78,13 @@ void create_webpage(char *html_code)
                      "          <th>LDR Light intensity</th>\n"
                      "          <td>%d%%</td>\n"
                      "        </tr>\n"
+                     "        <tr>\n"
+                     "          <th>Soil moisture</th>\n"
+                     "          <td>%d%%</td>\n"
+                     "        </tr>\n"
                      "      </tbody>\n"
                      "    </table>\n"
                      "  </body>\n"
                      "</html>",
-          get_timestamp(), temperature_reading(), get_co2_ppm_value(), get_light_intensity());
+          get_timestamp(), temperature_reading(), get_co2_ppm_value(), get_light_intensity(), get_soil_humidity());
 }

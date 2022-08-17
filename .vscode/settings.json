@@ -16,6 +16,8 @@
     "lux_driver.h": "c",
     "timer_driver.h": "c",
     "mq135.h": "c",
-    "adc_driver.h": "c"
+    "adc_driver.h": "c",
+    "ldr_driver.h": "c",
+    "param.h": "c"
   }
 }

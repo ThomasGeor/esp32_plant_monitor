@@ -26,5 +26,6 @@ void app_main(void)
   tc74_init();
   ldr_init();
   mq135_init();
+  sen0193_init();
   http_server_config();
 }

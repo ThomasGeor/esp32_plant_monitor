@@ -5,7 +5,7 @@
 #define LDR_R_POW_FACTOR -1.4059
 #define LDR_CONST 12500000
 
-#define MAX_V_VAL 3150
+#define MAX_V_VAL 3300
 #define MIN_V_VAL 342
 #define LI_RANGE (MAX_V_VAL - MIN_V_VAL)
 
