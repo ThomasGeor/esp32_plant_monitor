@@ -7,3 +7,4 @@ build/
 *.cache
 *.log
 *.check_cache
+*.md
