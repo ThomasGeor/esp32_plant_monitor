@@ -9,8 +9,8 @@
 #include "mdns.h"
 #include "lwip/apps/netbiosns.h"
 
-#define WIFI_SSID "Vodafone_2.4G-12861"
-#define WIFI_PASS "tom_bill_katina"
+#define WIFI_SSID
+#define WIFI_PASS
 #define MAXIMUM_RETRY 2
 
 #define WIFI_CONNECTED_BIT BIT0
