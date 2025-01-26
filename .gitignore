@@ -1,0 +1,14 @@
+# Ignore these directories and files
+.vscode/
+build/
+managed_components/
+*.json
+*.out
+*.cmake
+*.bin
+*.cache
+*.log
+*.check_cache
+*.md
+*.old
+*.swp

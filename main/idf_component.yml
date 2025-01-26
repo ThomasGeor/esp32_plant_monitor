@@ -1,0 +1,33 @@
+## IDF Component Manager Manifest File
+targets:
+  - esp32
+
+dependencies:
+  espressif/mdns:
+    version: "^1.0.0"
+  ## Required IDF version
+  idf:
+    version: ">=4.1.0"
+  ## Custom Components
+  timer_driver:
+    path: ../timer_driver
+  adc:
+    path: ../adc
+  wifi:
+    path: ../wifi
+  tc74:
+    path: ../tc74
+  MQ135:
+    path: ../MQ135
+  dht22:
+    path: ../dht22
+  ldr:
+    path: ../ldr
+  sen0193:
+    path: ../sen0193
+  sntp_client:
+    path: ../sntp_client
+  http_server:
+    path: ../http_server
+  html_pages:
+    path: ../html_pages
